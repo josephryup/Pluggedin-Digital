@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 13% 18%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 13% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 13% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 82 100% 50%;
+    --primary-foreground: 220 13% 18%;
+
+    --secondary: 220 13% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 13% 25%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 82 100% 50%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 30%;
+    --input: 220 13% 25%;
+    --ring: 82 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 13%, 18%) 0%, hsl(180, 50%, 20%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(220, 13%, 22%) 0%, hsl(220, 13%, 18%) 100%);
+    --green-glow: 82 100% 50%;
+    --yellow-accent: 60 100% 50%;
+    --orange-accent: 30 100% 60%;
+    --contact-bg: 82 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Apply fonts globally */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', cursive;
+}
+h2, h3, h4 {
+  letter-spacing: 0.05em;
+}
